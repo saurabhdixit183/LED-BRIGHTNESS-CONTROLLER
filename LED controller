@@ -1,0 +1,24 @@
+# CASE STUDY 2- LED BRIGHTNESS CONTROLLER
+MIN_BRIGHTNESS = 0   
+MAX_BRIGHTNESS = 100 
+brightness = 50     
+while True:
+    print(f"Current Brightness: {brightness}")
+    button = input("Press button (+, -, exit): ").strip()
+    if button == '+':
+        if brightness < MAX_BRIGHTNESS:
+            brightness += 10
+            print("Brightness increased")
+        else:
+            print("Brightness is already at max")
+    elif button == '-':
+        if brightness > MIN_BRIGHTNESS:
+            brightness -= 10
+            print("Brightness decreased")
+        else:
+            print("Brightness is already at min!")
+    elif button == 'exit':
+        print("Exiting program")
+        break
+    else:
+        print("Invalid button pressed! Please press +, -, or exit")
